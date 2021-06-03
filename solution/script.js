@@ -14,6 +14,8 @@ console.log(array.length);
 
 // array.length = 0;
 
+// array = []
+
 // console.log(array);
 
 // array.length = 5;
@@ -63,7 +65,7 @@ const n5 = 5;
 
 array = [];
 
-array.push(n1,n2,n3,n4,n5);
+array.unshift(n1,n2,n3,n4,n5);
 
 console.log(array);
 
@@ -82,6 +84,19 @@ let object = {
     age: "22",
     gender: "male"
 }
+
+
+
+try {
+    for (i in object) {
+        console.log (i);
+    }
+}catch (error) {
+    console.log(error);
+}finally {
+    console.log("completed...");
+}
+
 
 
 
@@ -113,14 +128,23 @@ const randonNumber = Math.floor(Math.random()*10);
 
 console.log(randonNumber);
 
+// try {
+//     if (randonNumber < 5 ) {
+//         console.log(randonNumber);
+//     } else {
+//         throw new Error('The number is high');
+//     }
+// }catch(e) {
+//     console.log('An Error caught');
+//     console.log(`Error Message:${e}`);
+// }
+
 try {
-    if (randonNumber < 5 ) {
-        console.log(randonNumber);
+    if ("randon" < 5) {
+        console.log("random");
     } else {
-        throw new Error('The number is high');
+        throw new Error("This is high");
     }
 }catch(e) {
-    console.log('An Error caught');
-    console.log(`Error Message:${e}`);
+    console.log(e);
 }
-
